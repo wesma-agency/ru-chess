@@ -1,0 +1,469 @@
+.calendar {
+	&__wrap {
+		padding: 5px 0 50px 0;
+	}
+
+	&__subtitle {
+		font-size: 20px;
+		line-height: 140%;
+		color: #999999;
+		margin-bottom: 30px;
+	}
+
+	&__row {
+		display: grid;
+		grid-template-columns: 0.675fr 1fr;
+		gap: 50px;
+	}
+
+	&__column {
+	}
+
+	&__block {
+		&:not(:last-child) {
+			margin-bottom: 50px;
+		}
+	}
+}
+
+.block-calendar {
+	&__date {
+		margin-bottom: 40px;
+		font-weight: 500;
+		font-size: 26px;
+		line-height: 26px;
+		color: #000000;
+	}
+
+	&__list {
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 50px;
+		}
+	}
+}
+
+.card-calendar {
+	padding: 30px 50px 30px 30px;
+	background: #f9f9f9;
+	border-radius: 10px;
+	transition: all 0.3s ease;
+
+	&.active {
+		& .card-calendar__group-two {
+			display: block;
+		}
+	}
+
+	&__group-one {
+		margin-bottom: 20px;
+	}
+
+	&__info {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: 10px;
+	}
+
+	&__option {
+		margin-bottom: 10px;
+		font-size: 14px;
+		line-height: 14px;
+		color: #000000;
+
+		&:first-child {
+			padding: 5px 15px;
+			background: #eeeeee;
+		}
+
+		&:not(:last-child) {
+			margin-right: 45px;
+		}
+	}
+
+	&__date {
+		margin-bottom: 20px;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 140%;
+		color: #000000;
+	}
+
+	&__title {
+		cursor: pointer;
+		font-weight: bold;
+		font-size: 28px;
+		line-height: 28px;
+		color: #5a2f28;
+	}
+
+	&__group-two {
+		display: none;
+	}
+
+	&__text {
+		margin-bottom: 20px;
+		font-size: 20px;
+		line-height: 140%;
+		color: rgba(0, 0, 0, 0.5);
+	}
+
+	&__order {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__order-palce {
+		display: flex;
+		align-items: center;
+		max-width: 415px;
+		margin-right: 15px;
+	}
+
+	&__order-palce-name {
+		margin-right: 15px;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 14px;
+		color: #797979;
+	}
+
+	&__order-palce-value {
+		font-size: 14px;
+		line-height: 18px;
+		color: #797979;
+	}
+
+	&__order-button {
+		cursor: pointer;
+		max-width: 190px;
+		font-size: 14px;
+		line-height: 14px;
+	}
+
+	&__back {
+		margin-top: 50px;
+		display: block;
+		position: relative;
+		padding-left: 15px;
+		font-size: 12px;
+		line-height: 12px;
+		color: rgba(0, 0, 0, 0.35);
+		transition: all 0.3s ease;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(0, -50%);
+			width: 8px;
+			height: 13px;
+			background: url("../img/icon-arrow-back-tournament.svg") no-repeat;
+			opacity: 0.35;
+			transition: all 0.3s ease;
+		}
+
+		&:hover {
+			color: rgba(0, 0, 0, 1);
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+
+	&:hover {
+		box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.15);
+	}
+}
+
+.litepicker-container {
+	min-width: 500px;
+}
+
+.litepicker {
+	width: 100%;
+	font-family: "Styrene A Web", sans-serif, Arial;
+	font-size: 20px;
+	line-height: 1.4;
+
+	background: #ffffff;
+	box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.15);
+	border-radius: 10px;
+}
+
+.litepicker .container__months {
+	padding: 30px;
+}
+
+.litepicker .month-item-weekdays-row > div {
+	font-size: 18px;
+	line-height: 18px;
+	color: #bdbdbd;
+}
+
+.litepicker .container__days > div {
+	margin-bottom: -1px;
+}
+
+.litepicker .day-item {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	font-size: 18px;
+	line-height: 18px;
+
+	& span {
+		pointer-events: none;
+		padding-bottom: 2px;
+		border-bottom: 2px solid #5a2f28;
+	}
+
+	& .day-item-sup {
+		position: absolute;
+		top: 30%;
+		left: 70%;
+		transform: translate(-50%, -50%);
+
+		font-size: 10px;
+		line-height: 10px;
+		color: #5a2f28;
+
+		pointer-events: none;
+	}
+
+	&:not(.is-in-range) {
+		border-radius: 50% !important;
+	}
+
+	&.is-in-range {
+		border-top: 1px solid rgba(90, 47, 40, 0.5);
+		border-bottom: 1px solid rgba(90, 47, 40, 0.5);
+	}
+
+	&.is-start-date {
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 50%;
+			height: 100%;
+			background-color: var(--litepicker-is-in-range-color);
+			border-top: 1px solid rgba(90, 47, 40, 0.5);
+			border-bottom: 1px solid rgba(90, 47, 40, 0.5);
+		}
+
+		&.is-flipped {
+			&::before {
+				right: initial;
+				left: 0;
+			}
+		}
+
+		& .day-item-sup {
+			color: #fff;
+		}
+
+		& span {
+			border-color: #fff;
+		}
+	}
+
+	&.is-end-date {
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 100%;
+			background-color: var(--litepicker-is-in-range-color);
+			border-top: 1px solid rgba(90, 47, 40, 0.5);
+			border-bottom: 1px solid rgba(90, 47, 40, 0.5);
+		}
+
+		&.is-flipped {
+			&::before {
+				left: initial;
+				right: 0;
+			}
+		}
+
+		& .day-item-sup {
+			color: #fff;
+		}
+
+		& span {
+			border-color: #fff;
+		}
+	}
+
+	&.is-start-date.is-end-date {
+		&::before {
+			content: none;
+		}
+	}
+}
+
+.litepicker .container__months .month-item-header {
+	margin-bottom: 50px;
+}
+
+:root {
+	--litepicker-day-width: calc(100% / 7);
+	--litepicker-is-start-color-bg: #5a2f28;
+	--litepicker-is-end-color-bg: #5a2f28;
+	--litepicker-is-in-range-color: rgba(90, 47, 40, 0.1);
+	--litepicker-day-color: #000;
+
+	--litepicker-button-prev-month-color-hover: #5a2f28;
+	--litepicker-button-next-month-color-hover: #5a2f28;
+
+	--litepicker-day-color-hover: #5a2f28;
+
+	--litepicker-button-apply-color-bg: #5a2f28;
+	--litepicker-button-reset-color-hover: #5a2f28;
+}
+
+@media (max-width: 1470px) {
+	.calendar {
+		&__subtitle {
+			@include adaptiv-font(20, 16);
+		}
+	}
+
+	.block-calendar {
+		&__date {
+			@include adaptiv-font(26, 18);
+		}
+	}
+
+	.card-calendar {
+		&__title {
+			@include adaptiv-font(28, 20);
+		}
+
+		&__date {
+			@include adaptiv-font(20, 16);
+		}
+
+		&__text {
+			@include adaptiv-font(20, 14);
+		}
+	}
+}
+
+@media (max-width: 1400px) {
+	.calendar {
+		&__row {
+			gap: 25px;
+		}
+	}
+}
+
+@media (max-width: 1170px) {
+	.calendar {
+		&__row {
+			grid-template-columns: 1fr;
+		}
+
+		&__block {
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	.litepicker-container {
+		max-width: 500px;
+		margin: 0 auto;
+	}
+
+	.block-calendar {
+		&__date {
+			margin-bottom: 20px;
+		}
+
+		&__item {
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	.card-calendar {
+		&__back {
+			margin-top: 30px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.litepicker-container {
+		min-width: 270px;
+	}
+
+	.litepicker .container__months {
+		padding: 10px;
+	}
+
+	.card-calendar {
+		padding: 15px;
+
+		&__order {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		&__order-palce {
+			margin-right: 0;
+			margin-bottom: 15px;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.card-calendar {
+		&__order-palce {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		&__order-palce-name {
+			margin-right: 0;
+			margin-bottom: 15px;
+		}
+	}
+
+	.litepicker {
+		font-size: 14px;
+	}
+
+	.litepicker .day-item {
+		font-size: 12px;
+		line-height: 12px;
+	}
+
+	.litepicker .container__months .month-item-weekdays-row > div {
+		font-size: 12px;
+		line-height: 12px;
+	}
+
+	.litepicker .container__months .month-item-header {
+		margin-bottom: 20px;
+	}
+
+	.litepicker .day-item .day-item-sup {
+		top: 26%;
+		left: 76%;
+	}
+}

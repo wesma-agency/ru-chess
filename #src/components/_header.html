@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/mmenu.css" />
+
+  <link rel="stylesheet" href="./css/lightgallery-bundle.min.css">
+  <link rel="stylesheet" href="./css/lg-fullscreen.css">
+  <link rel="stylesheet" href="./css/lg-thumbnail.css">
+  <link rel="stylesheet" href="./css/lg-transitions.css">
+  <link rel="stylesheet" href="./css/lg-video.css">
+
+  <link rel="stylesheet" href="./css/nice-select.css">
+
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <title>Document</title>
+</head>
+
+<body>
+
+  <nav id="menu" class="mm-menu_offcanvas">
+    <ul>
+
+    </ul>
+  </nav>
+
+  <div class="wrapper">
+
+    <!-- HEADER -->
+
+    <header class="header @@class">
+      <div class="header__top">
+        <div class="container">
+          <div class="header__row">
+            <div class="header__column">
+              <div class="header__logo logo"><a href="#"><img src="@@logosrc" alt=""></a></div>
+
+              <div class="header__text">Официальный сайт Федерации
+                по русским шахматам России</div>
+            </div>
+
+            <div class="header__column">
+              <ul class="header__list js-mobile-menu">
+                <li class="header__item --not-move"><a class="header__link --loc " href="#"><span>Выберите
+                      регион</span></a></li>
+                <li class="header__item"><a class="header__link " href="tel:84993908295"><span> 8 (499)
+                      390-82-95</span></a>
+                </li>
+                <li class="header__item"><a class="header__link " href="tel:89652664177"><span> 8 (965)
+                      266-41-77</span></a>
+                </li>
+                <li class="header__item"><a class="header__link" href="mailto:info@rus-chess.ru"><span>
+                      info@rus-chess.ru</span></a>
+                </li>
+              </ul>
+
+              <div class="header__burger mobile-menu">
+                <svg class="mob-menu__ham ham hamRotate ham8 js-ham" viewBox="0 0 100 100" height="50" width="50">
+                  <path class="line top"
+                    d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+                  <path class="line middle" d="m 30,50 h 40" />
+                  <path class="line bottom"
+                    d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+                </svg>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="container">
+          @@include("_main-menu.html")
+        </div>
+      </div>
+    </header>
+
+
+    <!-- // HEADER -->

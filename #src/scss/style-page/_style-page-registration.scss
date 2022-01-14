@@ -1,0 +1,325 @@
+.registration {
+	&__wrap {
+		padding: 20px 0 50px 0;
+	}
+
+	&__row {
+		display: grid;
+		grid-template-columns: 1fr 0.516fr;
+		gap: 50px;
+	}
+
+	&__column {
+	}
+
+	&__calendar {
+		position: relative;
+		margin-bottom: 60px;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100vw;
+			height: 100%;
+			background: #f9f9f9;
+			transition: all 0.3s ease;
+		}
+
+		&:hover {
+			box-shadow: none;
+			&::before {
+				box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.15);
+			}
+		}
+
+		& .card-calendar__order-palce {
+			max-width: 100%;
+			margin-right: 0;
+		}
+
+		& .card-calendar__group-one {
+			position: relative;
+			z-index: 2;
+		}
+
+		& .card-calendar__group-two {
+			position: relative;
+			z-index: 2;
+		}
+	}
+
+	&__tournament {
+	}
+
+	&__added-tournament {
+		position: relative;
+		display: inline-block;
+		padding: 20px 35px 20px 0;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 140%;
+		color: #ffffff;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100vw;
+			height: 100%;
+			background: #5a2f28;
+		}
+
+		& span {
+			position: relative;
+			z-index: 2;
+		}
+	}
+
+	&__form {
+	}
+}
+
+.from-registration {
+	&__title {
+		margin-bottom: 60px;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 16px;
+		color: #797979;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: start;
+		gap: 40px;
+		margin-bottom: 50px;
+	}
+
+	&__wrap-input {
+		&:last-child {
+			grid-column: span 2;
+		}
+	}
+
+	&__wrap-button {
+		display: flex;
+		align-items: center;
+	}
+
+	&__info {
+		margin-right: 15px;
+		font-size: 12px;
+		line-height: 140%;
+		color: #999999;
+		text-align: center;
+		& a {
+			color: #5a2f28;
+			border-bottom: 1px solid transparent;
+			transition: all 0.3s ease;
+			&:hover {
+				border-color: #5a2f28;
+			}
+		}
+	}
+
+	&__button {
+		max-width: 535px;
+	}
+}
+
+.order-registration {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	&__image {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		height: 275px;
+
+		& img {
+			position: relative;
+			z-index: 2;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: 275px;
+			height: 275px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 50%;
+			background: #5a2f28;
+			z-index: 1;
+		}
+	}
+
+	&__wrap {
+		position: relative;
+		padding: 20px 40px 40px 40px;
+		&::before {
+			content: "";
+			position: absolute;
+			top: -50%;
+			bottom: 0;
+			left: 0;
+			width: 100vw;
+			background: #f9f9f9;
+		}
+	}
+
+	&__title {
+		position: relative;
+		margin-bottom: 30px;
+		font-weight: bold;
+		font-size: 26px;
+		line-height: 140%;
+		color: #000000;
+		z-index: 2;
+	}
+
+	&__button {
+		position: relative;
+		margin-bottom: 10px;
+		max-width: 260px;
+		font-size: 14px;
+		z-index: 2;
+	}
+
+	&__info {
+		position: relative;
+		max-width: 260px;
+		font-weight: 300;
+		font-size: 9px;
+		line-height: 14px;
+		text-align: center;
+		color: #000000;
+		z-index: 2;
+		& a {
+			color: #5a2f28;
+			border-bottom: 1px solid #5a2f28;
+			transition: all 0.3s ease;
+			&:hover {
+				border-color: transparent;
+			}
+		}
+	}
+}
+
+@media (max-width: 1470px) {
+	.registration {
+		&__added-tournament {
+			@include adaptiv-font(20, 16);
+		}
+	}
+
+	.order-registration {
+		&__title {
+			@include adaptiv-font(26, 18);
+		}
+	}
+
+	.from-registration {
+		&__title {
+			@include adaptiv-font(20, 16);
+		}
+	}
+}
+
+@media (max-width: 1170px) {
+	.registration {
+		&__wrap {
+			padding: 10px 0 50px 0;
+		}
+
+		&__row {
+			gap: 15px;
+		}
+
+		&__calendar {
+			margin-bottom: 30px;
+		}
+
+		&__added-tournament {
+			padding: 15px 15px 15px 0;
+		}
+	}
+
+	.order-registration {
+		&__wrap {
+			padding: 15px;
+		}
+
+		&__image {
+			&::before {
+				width: 200px;
+				height: 200px;
+			}
+		}
+	}
+
+	.from-registration {
+		&__title {
+			margin-bottom: 30px;
+		}
+
+		&__list {
+			gap: 20px;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.registration {
+		&__row {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.order-registration {
+		align-items: center;
+		text-align: center;
+
+		&__wrap {
+			&::before {
+				width: initial;
+				left: -100vw;
+				right: -100vw;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.from-registration {
+		&__list {
+			grid-template-columns: 1fr;
+		}
+
+		&__wrap-input {
+			&:last-child {
+				grid-column: span 1;
+			}
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.from-registration {
+		&__wrap-button {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		&__info {
+			margin-right: 0;
+			margin-bottom: 15px;
+		}
+	}
+}

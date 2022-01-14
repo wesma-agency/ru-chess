@@ -1,0 +1,100 @@
+@@include("../components/_header.html", {
+"class": "--white",
+"logosrc": "./img/logo-black.svg"
+})
+
+<main class="main">
+    <section class="page-navigation">
+        <div class="container">
+            <div class="page-navigation__row">
+                <div class="page-navigation__column">
+                    <div class="page-navigation__title title-h2"><span>Страницы</span></div>
+
+                    <div class="page-navigation__list">
+                        <a href="./index.html" class="page-navigation__item">Главная</a>
+
+                        <a href="./page-structure.html" class="page-navigation__item">Структура</a>
+
+                        <a href="./page-document.html" class="page-navigation__item">Документы</a>
+
+                        <a href="./page-catalog.html " class="page-navigation__item">Продукция</a>
+
+                        <a href="./page-card-product.html " class="page-navigation__item">Карточка</a>
+
+                        <a href="./page-federation.html " class="page-navigation__item">История Федерации</a>
+
+                        <a href="./page-membership.html " class="page-navigation__item">Членство в Федерации</a>
+
+                        <a href="./page-rules.html " class="page-navigation__item">Правила игры</a>
+
+                        <a href="./page-news.html " class="page-navigation__item">Новости</a>
+
+                        <a href="./page-news-article.html " class="page-navigation__item">Страница новости</a>
+
+                        <a href="./page-search-federation.html " class="page-navigation__item">Поиск федерации</a>
+
+                        <a href="./page-place-info.html " class="page-navigation__item">Информация о федерации</a>
+
+                        <a href="./page-calendar.html " class="page-navigation__item">Календарь турниров</a>
+
+                        <a href="./page-registration.html " class="page-navigation__item">Регистрация на турнир</a>
+
+                        <a href="./page-404.html " class="page-navigation__item">404</a>
+                    </div>
+                </div>
+
+                <div class="page-navigation__column">
+                    <div class="page-navigation__title title-h2"><span>Попапы</span></div>
+
+                    <div class="page-navigation__list">
+                        <a href="#popup-teacher" data-popup="popup-teacher"
+                            class="page-navigation__item js-modal-show">Тренер-преподаватель по
+                            шахматам в школе</a>
+
+                        <a href="#popup-director" data-popup="popup-director"
+                            class="page-navigation__item js-modal-show">Руководитель шахматного
+                            кружка (секции)</a>
+
+                        <a href="#popup-order-product" data-popup="popup-order-product"
+                            class="page-navigation__item js-modal-show">Комплект «Каменное чудо»</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<style>
+    .page-navigation {
+        padding: 100px 0
+    }
+
+    .page-navigation__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .page-navigation__title {
+        margin-bottom: 40px;
+    }
+
+    .page-navigation__list {
+        display: grid;
+        gap: 20px;
+    }
+
+    .page-navigation__item {
+        font-size: 24px;
+        line-height: 180%;
+        color: #AA1D26;
+    }
+
+    @media (max-width: 768px) {
+        .page-navigation__item {
+            font-size: 18px;
+        }
+    }
+</style>
+
+@@include("../components/_footer.html")

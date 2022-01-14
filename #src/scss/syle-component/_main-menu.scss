@@ -1,0 +1,166 @@
+.header .main-nav {
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__item {
+		position: relative;
+		margin-right: 15px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:last-child:before {
+			display: none;
+		}
+
+		& > .main-nav__submenu.show-menu {
+			padding-top: 75px;
+			top: 0;
+			left: -44px;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: -40px;
+			transform: translate(0, -50%);
+			width: 4px;
+			height: 4px;
+			background: #fff;
+		}
+
+		&.--subcat {
+			& .main-nav__link {
+				position: relative;
+				z-index: 2;
+			}
+		}
+
+		&:not(.--subcat) {
+			& .main-nav__link {
+				border-bottom: 1px solid transparent;
+				transition: all 0.3s ease;
+			}
+			&:hover {
+				& .main-nav__link {
+					border-color: #fff;
+				}
+			}
+		}
+	}
+
+	&__link {
+		display: block;
+		padding: 21px 0 19px 0;
+		font-weight: bold;
+		font-size: 15px;
+		line-height: 1.4;
+		text-transform: uppercase;
+		color: #ffffff;
+
+		transition: all 0.3s ease;
+	}
+
+	&__submenu {
+		background: #ffffff;
+		padding: 44px 44px 39px 44px;
+	}
+
+	&__subitem {
+		margin-bottom: 13px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__sublink {
+		display: inline-block;
+		font-weight: bold;
+		font-size: 15px;
+		line-height: 1.4;
+		text-transform: uppercase;
+		color: #999999;
+		transition: all 0.3s ease;
+		&:hover {
+			color: #000000;
+		}
+		&.current {
+			color: #000000;
+		}
+	}
+
+	& .show-menu {
+		position: absolute;
+
+		top: 0;
+		left: 100%;
+
+		min-width: 400px;
+
+		opacity: 0;
+		visibility: hidden;
+
+		transform: translateY(100px);
+
+		transition: all 0.3s ease;
+
+		z-index: 1;
+	}
+
+	& .hover-item {
+		position: relative;
+		&:hover {
+			& > .show-menu {
+				opacity: 1;
+				visibility: visible;
+
+				transform: translateY(0px);
+			}
+			&.--subcat {
+				& .main-nav__link {
+					color: #000000;
+				}
+			}
+		}
+	}
+}
+
+.header.--white .main-nav {
+	&__item {
+		&::before {
+			background: #000;
+		}
+		&:not(.--subcat) {
+			&:hover {
+				& .main-nav__link {
+					border-color: #000;
+				}
+			}
+		}
+	}
+
+	&__link {
+		color: #000;
+	}
+
+	&__submenu {
+		box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.1);
+	}
+}
+
+@media (max-width: 1300px) {
+	.header .main-nav__item::before {
+		right: -30px;
+	}
+}
+
+@media (max-width: 1170px) {
+	.header__bottom {
+		display: none;
+	}
+}

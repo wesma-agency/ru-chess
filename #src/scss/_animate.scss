@@ -1,0 +1,40 @@
+// Анимация появления снизу
+.slideTo {
+	opacity: 0;
+	transform: translate(0, 100px);
+	transition: all 0.6s ease;
+	&.animate {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+.block-structure {
+	& .card-personal {
+		&:nth-child(3n + 2) {
+			transition: all 0.6s ease 0.2s;
+		}
+
+		&:nth-child(3n + 3) {
+			transition: all 0.6s ease 0.3s;
+		}
+	}
+}
+
+@media (max-width: 1170px) {
+	.block-structure {
+		& .card-personal {
+			&:nth-child(3n + 2) {
+				transition: all 0.6s ease 0s;
+			}
+
+			&:nth-child(3n + 3) {
+				transition: all 0.6s ease 0s;
+			}
+
+			&:nth-child(2n + 2) {
+				transition: all 0.6s ease 0.2s;
+			}
+		}
+	}
+}

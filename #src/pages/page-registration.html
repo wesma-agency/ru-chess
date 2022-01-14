@@ -1,0 +1,147 @@
+@@include("../components/_header.html", {
+"class": "--white",
+"logosrc": "./img/logo-black.svg"
+})
+
+<main class="main">
+    <section class="breadcrumbs">
+        <div class="container">
+            <div class="breadcrumbs__wrap">
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item"><a href="#">Главная</a></li>
+                    <li class="breadcrumbs__item"><span>Регистрация на турнир</span></li>
+                </ul>
+
+                <div class="main__title title-h1">Регистрация на турнир</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="registration">
+        <div class="container">
+            <div class="registration__wrap">
+
+                <div class="registration__row">
+                    <div class="registration__column">
+                        <div class="registration__tournament">
+                            <div class="registration__added-tournament"><span>Выбранный турнир</span></div>
+
+                            <div class="registration__calendar card-calendar active">
+                                <div class="card-calendar__group-one">
+                                    <div class="card-calendar__info">
+                                        <div class="card-calendar__option">Крымская область</div>
+                                        <div class="card-calendar__option">Время: 10:20-13:00</div>
+                                        <div class="card-calendar__option">Город: Севастополь</div>
+                                    </div>
+
+                                    <div class="card-calendar__date">9 сентября 2021</div>
+
+                                    <div class="card-calendar__title">Крымский турнир по Русским шахматам</div>
+                                </div>
+
+                                <div class="card-calendar__group-two">
+                                    <div class="card-calendar__text">Соревнование проводится заочно с 10 мая 2021
+                                        года по 10 декабря 2021 года.</div>
+                                    <div class="card-calendar__order">
+                                        <div class="card-calendar__order-palce">
+                                            <span class="card-calendar__order-palce-name">Место:</span>
+                                            <span class="card-calendar__order-palce-value">ГБОУ Средняя
+                                                общеобразовательная школа № 6, ул. Героев Севастополя, 15</span>
+                                        </div>
+                                    </div>
+
+                                    <a href="#" class="card-calendar__back">Вернуться к списку турниров</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form action="#" class="registration__form from-registration">
+                            <div class="from-registration__title">Для регистрации заполните форму</div>
+
+                            <div class="from-registration__list">
+                                <div class="from-registration__wrap-input wrap-input">
+                                    <input type="text" placeholder="ФИО *">
+                                </div>
+
+                                <div class="from-registration__wrap-input wrap-input">
+                                    <input type="text" placeholder="Дата рождения *">
+                                </div>
+
+                                <div class="from-registration__wrap-input wrap-input --hint">
+                                    <input type="text" placeholder="E-mail *">
+
+                                    <div class="wrap-input__hint js-hint">
+                                        <div class="wrap-input__hint-icon">?</div>
+                                        <div class="wrap-input__hint-popup js-hint-popup">
+                                            Текст подсказки
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="from-registration__wrap-input wrap-input --hint">
+                                    <div class="wrap-input__hint js-hint">
+                                        <div class="wrap-input__hint-icon">?</div>
+                                        <div class="wrap-input__hint-popup js-hint-popup">
+                                            Текст подсказки
+                                        </div>
+                                    </div>
+                                    <select>
+                                        <option value="Региональная Федерация">Региональная Федерация</option>
+                                        <option value="Региональная Федерация">Региональная Федерация</option>
+                                        <option value="Региональная Федерация">Региональная Федерация</option>
+                                        <option value="Региональная Федерация">Региональная Федерация</option>
+                                    </select>
+                                </div>
+
+                                <div class="from-registration__wrap-input wrap-input">
+                                    <input type="tel" placeholder="Телефон *">
+                                </div>
+
+                                <div class="from-registration__wrap-input wrap-input">
+                                    <textarea
+                                        placeholder="Напишите сюда любую дополнительную  информацию, которую Вы бы хотели указать в заявлении"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="from-registration__wrap-button">
+                                <div class="from-registration__info">
+                                    Нажимая кнопку "Отправить" вы принимаете <a href="#">Соглашения об обработке
+                                        персональных данных.</a>
+                                </div>
+
+                                <button type="submit"
+                                    class="from-registration__button main-button --bg">Отправить</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                    <div class="registration__column">
+                        <div class="registration__order order-registration">
+                            <div class="order-registration__image">
+                                <img src="./img/image-order-registration.png" alt="">
+                            </div>
+
+                            <div class="order-registration__wrap">
+                                <div class="order-registration__title">Хочу открыть школу<br> Русских шахмат</div>
+
+                                <a href="#" class="order-registration__button main-button">Отправить заявку</a>
+
+                                <div class="order-registration__info">
+                                    Нажимая кнопку "Отправить" вы принимаете <a href="#">Соглашения об обработке
+                                        персональных данных</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+</main>
+@@include("../components/_footer.html")
