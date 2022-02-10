@@ -665,4 +665,14 @@ $(document).ready(function () {
 			},
 		},
 	});
+
+	$(".tab-participants__list").mCustomScrollbar({
+		theme: "my-theme",
+		scrollInertia: 100,
+	});
+
+	$(".tab-participants__winners").mCustomScrollbar({
+		theme: "my-theme",
+		scrollInertia: 100,
+	});
 });

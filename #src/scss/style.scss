@@ -50,8 +50,6 @@
 
 @import "./style-page/_style-page-place-info";
 
-@import "./style-page/_style-page-calendar";
-
 @import "./style-page/_style-page-registration";
 
 @import "./style-page/_style-page-404";
@@ -307,3 +305,5 @@
 		}
 	}
 }
+
+@import "./style-page/_style-page-calendar";

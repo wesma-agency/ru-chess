@@ -83,6 +83,20 @@ h4 {
 	color: #000000;
 }
 
+.title-h5,
+h5 {
+	font-size: 22px;
+	line-height: 120%;
+	color: #000000;
+}
+
+.title-h6,
+h6 {
+	font-size: 18px;
+	line-height: 120%;
+	color: #000000;
+}
+
 .slider-arrow {
 	position: relative;
 	top: initial;
@@ -499,6 +513,16 @@ ul.chess-list li::before {
 	.title-h4,
 	h4 {
 		@include adaptiv-font(26, 16);
+	}
+
+	.title-h5,
+	h5 {
+		@include adaptiv-font(22, 16);
+	}
+
+	.title-h6,
+	h6 {
+		@include adaptiv-font(18, 14);
 	}
 
 	p {
