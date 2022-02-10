@@ -24,6 +24,38 @@
 			margin-bottom: 50px;
 		}
 	}
+
+	&__add-region {
+		margin-bottom: 20px;
+	}
+
+	&__filter {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		padding: 15px 0 25px 0;
+	}
+
+	&__filter-option {
+		cursor: pointer;
+		margin-bottom: 15px;
+		font-size: 20px;
+		line-height: 120%;
+		color: #999999;
+		border-bottom: 1px solid transparent;
+		transition: all 0.3s ease;
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
+		&:hover {
+			color: #000;
+			border-color: #000;
+		}
+		&.active {
+			color: #000;
+			border-color: #000;
+		}
+	}
 }
 
 .block-calendar {
@@ -46,96 +78,126 @@
 }
 
 .card-calendar {
+	position: relative;
 	padding: 30px 50px 30px 30px;
 	background: #f9f9f9;
 	border-radius: 10px;
 	transition: all 0.3s ease;
 
-	&.active {
-		& .card-calendar__group-two {
-			display: block;
+	&.--end {
+		& .card-calendar__order-button {
+			display: none;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(242, 242, 242, 0.5);
+			z-index: 5;
+		}
+	}
+
+	&.--end-registr {
+		& .card-calendar__order-button {
+			display: none;
 		}
 	}
 
 	&__group-one {
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 	}
 
 	&__info {
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
-		margin-bottom: 10px;
 	}
 
-	&__option {
-		margin-bottom: 10px;
-		font-size: 14px;
-		line-height: 14px;
-		color: #000000;
+	&__mark {
+		margin-bottom: 15px;
+		font-size: 18px;
+		line-height: 120%;
+		color: #5a2f28;
+	}
 
-		&:first-child {
-			padding: 5px 15px;
-			background: #eeeeee;
-		}
-
-		&:not(:last-child) {
-			margin-right: 45px;
+	&__region {
+		position: relative;
+		padding-left: 20px;
+		margin-bottom: 15px;
+		margin-right: 20px;
+		font-size: 16px;
+		line-height: 120%;
+		font-weight: bold;
+		color: #000;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 0px;
+			transform: translate(0px, -50%);
+			width: 15px;
+			height: 17px;
+			background: url("../img/icon-location.svg") no-repeat;
+			filter: invert(1);
 		}
 	}
 
 	&__date {
-		margin-bottom: 20px;
-		font-weight: 500;
-		font-size: 20px;
-		line-height: 140%;
-		color: #000000;
+		position: relative;
+		padding-left: 23px;
+		margin-bottom: 15px;
+		margin-right: 20px;
+		font-size: 16px;
+		line-height: 120%;
+		color: rgba(0, 0, 0, 0.5);
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 0px;
+			transform: translate(0px, -50%);
+			width: 18px;
+			height: 18px;
+			background: url("../img/calendar-svgrepo-com.svg") no-repeat;
+		}
+	}
+
+	&__time {
+		margin-bottom: 15px;
+		font-size: 16px;
+		line-height: 120%;
+		color: rgba(0, 0, 0, 0.5);
 	}
 
 	&__title {
+		margin-bottom: 20px;
 		cursor: pointer;
 		font-weight: bold;
 		font-size: 28px;
-		line-height: 28px;
-		color: #5a2f28;
+		line-height: 120%;
+		color: #000;
 	}
 
 	&__group-two {
-		display: none;
 	}
 
 	&__text {
 		margin-bottom: 20px;
-		font-size: 20px;
+		font-size: 18px;
 		line-height: 140%;
 		color: rgba(0, 0, 0, 0.5);
 	}
 
 	&__order {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
 	}
 
-	&__order-palce {
-		display: flex;
-		align-items: center;
-		max-width: 415px;
-		margin-right: 15px;
-	}
-
-	&__order-palce-name {
-		margin-right: 15px;
-		font-weight: 500;
-		font-size: 14px;
-		line-height: 14px;
-		color: #797979;
-	}
-
-	&__order-palce-value {
-		font-size: 14px;
-		line-height: 18px;
-		color: #797979;
+	&__order-end {
+		font-size: 24px;
+		line-height: 120%;
+		color: #000;
 	}
 
 	&__order-button {
@@ -175,7 +237,7 @@
 		}
 	}
 
-	&:hover {
+	&:not(.--end):hover {
 		box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.15);
 	}
 }
@@ -339,11 +401,9 @@
 		&__subtitle {
 			@include adaptiv-font(20, 16);
 		}
-	}
 
-	.block-calendar {
-		&__date {
-			@include adaptiv-font(26, 18);
+		&__filter-option {
+			@include adaptiv-font(20, 16);
 		}
 	}
 
@@ -352,12 +412,28 @@
 			@include adaptiv-font(28, 20);
 		}
 
-		&__date {
-			@include adaptiv-font(20, 16);
+		&__text {
+			@include adaptiv-font(18, 14);
 		}
 
-		&__text {
-			@include adaptiv-font(20, 14);
+		&__mark {
+			@include adaptiv-font(18, 14);
+		}
+
+		&__region {
+			@include adaptiv-font(16, 12);
+		}
+
+		&__date {
+			@include adaptiv-font(16, 12);
+		}
+
+		&__time {
+			@include adaptiv-font(16, 12);
+		}
+
+		&__order-end {
+			@include adaptiv-font(24, 16);
 		}
 	}
 }
@@ -372,6 +448,10 @@
 
 @media (max-width: 1170px) {
 	.calendar {
+		&__wrap {
+			padding: 5px 0 20px 0;
+		}
+
 		&__row {
 			grid-template-columns: 1fr;
 		}
@@ -381,6 +461,16 @@
 				margin-bottom: 20px;
 			}
 		}
+
+		&__add-region {
+			display: block;
+			max-width: 500px;
+			margin: 0 auto 20px auto;
+		}
+
+		&__filter {
+			padding: 15px 0;
+		}
 	}
 
 	.litepicker-container {
@@ -389,10 +479,6 @@
 	}
 
 	.block-calendar {
-		&__date {
-			margin-bottom: 20px;
-		}
-
 		&__item {
 			&:not(:last-child) {
 				margin-bottom: 20px;
@@ -418,32 +504,10 @@
 
 	.card-calendar {
 		padding: 15px;
-
-		&__order {
-			flex-direction: column;
-			align-items: flex-start;
-		}
-
-		&__order-palce {
-			margin-right: 0;
-			margin-bottom: 15px;
-		}
 	}
 }
 
 @media (max-width: 500px) {
-	.card-calendar {
-		&__order-palce {
-			flex-direction: column;
-			align-items: flex-start;
-		}
-
-		&__order-palce-name {
-			margin-right: 0;
-			margin-bottom: 15px;
-		}
-	}
-
 	.litepicker {
 		font-size: 14px;
 	}
@@ -465,5 +529,12 @@
 	.litepicker .day-item .day-item-sup {
 		top: 26%;
 		left: 76%;
+	}
+
+	.card-calendar {
+		&__info {
+			flex-direction: column;
+			align-items: flex-start;
+		}
 	}
 }

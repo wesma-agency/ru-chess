@@ -5449,6 +5449,39 @@ ul.circle-list li {
 .calendar__block:not(:last-child) {
   margin-bottom: 50px; }
 
+.calendar__add-region {
+  margin-bottom: 20px; }
+
+.calendar__filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 0 25px 0; }
+
+.calendar__filter-option {
+  cursor: pointer;
+  margin-bottom: 15px;
+  font-size: 20px;
+  line-height: 120%;
+  color: #999999;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  .calendar__filter-option:not(:last-child) {
+    margin-right: 30px; }
+  .calendar__filter-option:hover {
+    color: #000;
+    border-color: #000; }
+  .calendar__filter-option.active {
+    color: #000;
+    border-color: #000; }
+
 .block-calendar__date {
   margin-bottom: 40px;
   font-weight: 500;
@@ -5460,16 +5493,28 @@ ul.circle-list li {
   margin-bottom: 50px; }
 
 .card-calendar {
+  position: relative;
   padding: 30px 50px 30px 30px;
   background: #f9f9f9;
   border-radius: 10px;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
-  .card-calendar.active .card-calendar__group-two {
-    display: block; }
+  .card-calendar.--end .card-calendar__order-button {
+    display: none; }
+  .card-calendar.--end::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(242, 242, 242, 0.5);
+    z-index: 5; }
+  .card-calendar.--end-registr .card-calendar__order-button {
+    display: none; }
   .card-calendar__group-one {
-    margin-bottom: 20px; }
+    margin-bottom: 10px; }
   .card-calendar__info {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5478,66 +5523,74 @@ ul.circle-list li {
         -ms-flex-align: center;
             align-items: center;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin-bottom: 10px; }
-  .card-calendar__option {
-    margin-bottom: 10px;
-    font-size: 14px;
-    line-height: 14px;
-    color: #000000; }
-    .card-calendar__option:first-child {
-      padding: 5px 15px;
-      background: #eeeeee; }
-    .card-calendar__option:not(:last-child) {
-      margin-right: 45px; }
+        flex-wrap: wrap; }
+  .card-calendar__mark {
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 120%;
+    color: #5a2f28; }
+  .card-calendar__region {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+    font-size: 16px;
+    line-height: 120%;
+    font-weight: bold;
+    color: #000; }
+    .card-calendar__region::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      -webkit-transform: translate(0px, -50%);
+          -ms-transform: translate(0px, -50%);
+              transform: translate(0px, -50%);
+      width: 15px;
+      height: 17px;
+      background: url("../img/icon-location.svg") no-repeat;
+      -webkit-filter: invert(1);
+              filter: invert(1); }
   .card-calendar__date {
-    margin-bottom: 20px;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 140%;
-    color: #000000; }
+    position: relative;
+    padding-left: 23px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+    font-size: 16px;
+    line-height: 120%;
+    color: rgba(0, 0, 0, 0.5); }
+    .card-calendar__date::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      -webkit-transform: translate(0px, -50%);
+          -ms-transform: translate(0px, -50%);
+              transform: translate(0px, -50%);
+      width: 18px;
+      height: 18px;
+      background: url("../img/calendar-svgrepo-com.svg") no-repeat; }
+  .card-calendar__time {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 120%;
+    color: rgba(0, 0, 0, 0.5); }
   .card-calendar__title {
+    margin-bottom: 20px;
     cursor: pointer;
     font-weight: bold;
     font-size: 28px;
-    line-height: 28px;
-    color: #5a2f28; }
-  .card-calendar__group-two {
-    display: none; }
+    line-height: 120%;
+    color: #000; }
   .card-calendar__text {
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 140%;
     color: rgba(0, 0, 0, 0.5); }
-  .card-calendar__order {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-  .card-calendar__order-palce {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    max-width: 415px;
-    margin-right: 15px; }
-  .card-calendar__order-palce-name {
-    margin-right: 15px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 14px;
-    color: #797979; }
-  .card-calendar__order-palce-value {
-    font-size: 14px;
-    line-height: 18px;
-    color: #797979; }
+  .card-calendar__order-end {
+    font-size: 24px;
+    line-height: 120%;
+    color: #000; }
   .card-calendar__order-button {
     cursor: pointer;
     max-width: 190px;
@@ -5573,7 +5626,7 @@ ul.circle-list li {
       color: black; }
       .card-calendar__back:hover::before {
         opacity: 1; }
-  .card-calendar:hover {
+  .card-calendar:not(.--end):hover {
     -webkit-box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.15);
             box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.15); }
 
@@ -5693,29 +5746,43 @@ ul.circle-list li {
 @media (max-width: 1470px) {
   .calendar__subtitle {
     font-size: calc(16px + 4 * ((100vw - 320px) / 1110)); }
-  .block-calendar__date {
-    font-size: calc(18px + 8 * ((100vw - 320px) / 1110)); }
+  .calendar__filter-option {
+    font-size: calc(16px + 4 * ((100vw - 320px) / 1110)); }
   .card-calendar__title {
     font-size: calc(20px + 8 * ((100vw - 320px) / 1110)); }
-  .card-calendar__date {
-    font-size: calc(16px + 4 * ((100vw - 320px) / 1110)); }
   .card-calendar__text {
-    font-size: calc(14px + 6 * ((100vw - 320px) / 1110)); } }
+    font-size: calc(14px + 4 * ((100vw - 320px) / 1110)); }
+  .card-calendar__mark {
+    font-size: calc(14px + 4 * ((100vw - 320px) / 1110)); }
+  .card-calendar__region {
+    font-size: calc(12px + 4 * ((100vw - 320px) / 1110)); }
+  .card-calendar__date {
+    font-size: calc(12px + 4 * ((100vw - 320px) / 1110)); }
+  .card-calendar__time {
+    font-size: calc(12px + 4 * ((100vw - 320px) / 1110)); }
+  .card-calendar__order-end {
+    font-size: calc(16px + 8 * ((100vw - 320px) / 1110)); } }
 
 @media (max-width: 1400px) {
   .calendar__row {
     gap: 25px; } }
 
 @media (max-width: 1170px) {
+  .calendar__wrap {
+    padding: 5px 0 20px 0; }
   .calendar__row {
     grid-template-columns: 1fr; }
   .calendar__block:not(:last-child) {
     margin-bottom: 20px; }
+  .calendar__add-region {
+    display: block;
+    max-width: 500px;
+    margin: 0 auto 20px auto; }
+  .calendar__filter {
+    padding: 15px 0; }
   .litepicker-container {
     max-width: 500px;
     margin: 0 auto; }
-  .block-calendar__date {
-    margin-bottom: 20px; }
   .block-calendar__item:not(:last-child) {
     margin-bottom: 20px; }
   .card-calendar__back {
@@ -5727,31 +5794,9 @@ ul.circle-list li {
   .litepicker .container__months {
     padding: 10px; }
   .card-calendar {
-    padding: 15px; }
-    .card-calendar__order {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-align: start;
-          -ms-flex-align: start;
-              align-items: flex-start; }
-    .card-calendar__order-palce {
-      margin-right: 0;
-      margin-bottom: 15px; } }
+    padding: 15px; } }
 
 @media (max-width: 500px) {
-  .card-calendar__order-palce {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start; }
-  .card-calendar__order-palce-name {
-    margin-right: 0;
-    margin-bottom: 15px; }
   .litepicker {
     font-size: 14px; }
   .litepicker .day-item {
@@ -5764,7 +5809,15 @@ ul.circle-list li {
     margin-bottom: 20px; }
   .litepicker .day-item .day-item-sup {
     top: 26%;
-    left: 76%; } }
+    left: 76%; }
+  .card-calendar__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; } }
 
 .registration__wrap {
   padding: 20px 0 50px 0; }

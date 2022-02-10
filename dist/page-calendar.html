@@ -149,129 +149,226 @@
         <div class="container">
             <div class="calendar__wrap">
 
-                <div class="calendar__subtitle">Расписание мероприятий по Русским шахматам</div>
+                <div class="calendar__subtitle">Расписание мероприятий по таврелям (русским шахматам)</div>
 
                 <div class="calendar__row">
                     <div class="calendar__column">
+                        <a href="#" class="calendar__add-region main-button">Выбрать регион</a>
                         <div class="litepicker-container"></div>
                     </div>
 
                     <div class="calendar__column">
-                        <div class="calendar__block block-calendar">
-                            <div class="block-calendar__date">4 сентября 2021</div>
+                        <div class="calendar__filter">
+                            <div class="calendar__filter-option active js-filter-calendar" data-filter-calendar="all">
+                                Все</div>
+                            <div class="calendar__filter-option js-filter-calendar" data-filter-calendar="current"
+                                data-current-timestamp="1111">Актуальные турниры</div>
+                            <div class="calendar__filter-option js-filter-calendar" data-filter-calendar="archive"
+                                data-current-timestamp="1111">Архив турниров</div>
+                        </div>
 
+                        <div class="calendar__block block-calendar">
                             <div class="block-calendar__list">
-                                <div class="block-calendar__item card-calendar js-toggle active">
+                                <div class="block-calendar__item card-calendar">
+
                                     <div class="card-calendar__group-one">
-                                        <div class="card-calendar__info">
-                                            <div class="card-calendar__option">Крымская область</div>
-                                            <div class="card-calendar__option">Время: 10:20-13:00</div>
-                                        </div>
+                                        <div class="card-calendar__mark">Для школьников</div>
 
                                         <div class="card-calendar__title">Крымский турнир по Русским шахматам</div>
+
+                                        <div class="card-calendar__info">
+                                            <div class="card-calendar__region">Крымская область</div>
+                                            <div class="card-calendar__date">01.01.2022 - 31.01.2022</div>
+                                            <div class="card-calendar__time">10:20-13:00</div>
+                                        </div>
                                     </div>
 
                                     <div class="card-calendar__group-two">
                                         <div class="card-calendar__text">Соревнование проводится заочно с 10 мая 2021
                                             года по 10 декабря 2021 года.</div>
-                                        <div class="card-calendar__order">
-                                            <div class="card-calendar__order-palce">
-                                                <span class="card-calendar__order-palce-name">Место:</span>
-                                                <span class="card-calendar__order-palce-value">ГБОУ Средняя
-                                                    общеобразовательная школа № 6, ул. Героев Севастополя, 15</span>
-                                            </div>
 
-                                            <div class="card-calendar__order-button main-button --bg">Оставить заявку
+                                        <div class="card-calendar__order">
+                                            <div class="card-calendar__order-button main-button --bg">Хочу участвовать
                                             </div>
                                         </div>
+
                                     </div>
+
                                 </div>
 
-                                <div class="block-calendar__item card-calendar js-toggle">
-                                    <div class="card-calendar__group-one">
-                                        <div class="card-calendar__info">
-                                            <div class="card-calendar__option">Крымская область</div>
-                                            <div class="card-calendar__option">Время: 10:20-13:00</div>
-                                        </div>
+                                <div class="block-calendar__item card-calendar --end">
 
-                                        <div class="card-calendar__title">Крымский турнир по Русским шахматам</div>
+                                    <div class="card-calendar__group-one">
+                                        <div class="card-calendar__mark">Рапид</div>
+
+                                        <div class="card-calendar__title">Крымский турнир по Русским шахматам 2</div>
+
+                                        <div class="card-calendar__info">
+                                            <div class="card-calendar__region">Москва</div>
+                                            <div class="card-calendar__date">01.01.2022 - 31.01.2022</div>
+                                            <div class="card-calendar__time">10:20-13:00</div>
+                                        </div>
                                     </div>
 
                                     <div class="card-calendar__group-two">
-                                        <div class="card-calendar__text">Соревнование проводится заочно с 10 мая 2021
-                                            года по 10 декабря 2021 года.</div>
-                                        <div class="card-calendar__order">
-                                            <div class="card-calendar__order-palce">
-                                                <span class="card-calendar__order-palce-name">Место:</span>
-                                                <span class="card-calendar__order-palce-value">ГБОУ Средняя
-                                                    общеобразовательная школа № 6, ул. Героев Севастополя, 15</span>
-                                            </div>
+                                        <div class="card-calendar__text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
+                                            bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra
+                                            justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus
+                                            et magnis dis parturient montes.
+                                        </div>
 
-                                            <div class="card-calendar__order-button main-button --bg">Оставить заявку
+                                        <div class="card-calendar__order">
+                                            <div class="card-calendar__order-end">Турнир завершился</div>
+
+                                            <div class="card-calendar__order-button main-button --bg">Хочу участвовать
                                             </div>
                                         </div>
+
                                     </div>
+
+                                </div>
+
+                                <div class="block-calendar__item card-calendar --end-registr">
+
+                                    <div class="card-calendar__group-one">
+                                        <div class="card-calendar__mark">Рапид</div>
+
+                                        <div class="card-calendar__title">Крымский турнир по Русским шахматам 2</div>
+
+                                        <div class="card-calendar__info">
+                                            <div class="card-calendar__region">Москва</div>
+                                            <div class="card-calendar__date">01.01.2022 - 31.01.2022</div>
+                                            <div class="card-calendar__time">10:20-13:00</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-calendar__group-two">
+                                        <div class="card-calendar__text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
+                                            bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra
+                                            justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus
+                                            et magnis dis parturient montes.
+                                        </div>
+
+                                        <div class="card-calendar__order">
+                                            <div class="card-calendar__order-end">Регистрация на турнир завершена
+                                            </div>
+
+                                            <div class="card-calendar__order-button main-button --bg">Хочу участвовать
+                                            </div>
+                                        </div>
+
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
 
-                        <div class="calendar__block block-calendar">
-                            <div class="block-calendar__date">4 сентября 2021</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                            <div class="block-calendar__list">
-                                <div class="block-calendar__item card-calendar js-toggle">
-                                    <div class="card-calendar__group-one">
-                                        <div class="card-calendar__info">
-                                            <div class="card-calendar__option">Крымская область</div>
-                                            <div class="card-calendar__option">Время: 10:20-13:00</div>
-                                        </div>
+    <section class="news">
+        <div class="container">
+            <div class="news__wrap">
+                <div class="news__group-title">
+                    <div class="news__title title-h2">Последние новости турниров</div>
+                </div>
 
-                                        <div class="card-calendar__title">Крымский турнир по Русским шахматам</div>
+                <div class="news__text">Новости федерации, дни рождения, региональные новости и многое другое</div>
+
+                <div class="news__slider-container swiper-container">
+                    <div class="news__wrap-slides swiper-wrapper">
+                        <div class="news__slide swiper-slide">
+                            <a href="#" class="news__card card-news">
+                                <div class="card-news__image"><img src="./img/news-image-1.png" alt="" /></div>
+                                <div class="card-news__group">
+                                    <div class="card-news__info">
+                                        <div class="card-news__category">СМИ о нас</div>
+                                        <div class="card-news__date card-date">20 мая, 2021</div>
                                     </div>
 
-                                    <div class="card-calendar__group-two">
-                                        <div class="card-calendar__text">Соревнование проводится заочно с 10 мая 2021
-                                            года по 10 декабря 2021 года.</div>
-                                        <div class="card-calendar__order">
-                                            <div class="card-calendar__order-palce">
-                                                <span class="card-calendar__order-palce-name">Место:</span>
-                                                <span class="card-calendar__order-palce-value">ГБОУ Средняя
-                                                    общеобразовательная школа № 6, ул. Героев Севастополя, 15</span>
-                                            </div>
-
-                                            <div class="card-calendar__order-button main-button --bg">Оставить заявку
-                                            </div>
-                                        </div>
+                                    <div class="card-news__name card-name">Будущие морские офицеры освоили игру в
+                                        таврели
                                     </div>
+                                    <div class="card-news__text card-text">узнайте больше</div>
                                 </div>
-
-                                <div class="block-calendar__item card-calendar js-toggle">
-                                    <div class="card-calendar__group-one">
-                                        <div class="card-calendar__info">
-                                            <div class="card-calendar__option">Крымская область</div>
-                                            <div class="card-calendar__option">Время: 10:20-13:00</div>
-                                        </div>
-
-                                        <div class="card-calendar__title">Крымский турнир по Русским шахматам</div>
-                                    </div>
-
-                                    <div class="card-calendar__group-two">
-                                        <div class="card-calendar__text">Соревнование проводится заочно с 10 мая 2021
-                                            года по 10 декабря 2021 года.</div>
-                                        <div class="card-calendar__order">
-                                            <div class="card-calendar__order-palce">
-                                                <span class="card-calendar__order-palce-name">Место:</span>
-                                                <span class="card-calendar__order-palce-value">ГБОУ Средняя
-                                                    общеобразовательная школа № 6, ул. Героев Севастополя, 15</span>
-                                            </div>
-
-                                            <div class="card-calendar__order-button main-button --bg">Оставить заявку
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            </a>
                         </div>
+
+                        <div class="news__slide swiper-slide">
+                            <a href="#" class="news__card card-news">
+                                <div class="card-news__image"><img src="./img/news-image-2.png" alt="" /></div>
+                                <div class="card-news__group">
+                                    <div class="card-news__info">
+                                        <div class="card-news__category">Обзоры</div>
+                                        <div class="card-news__date card-date">16 мая, 2021</div>
+                                    </div>
+
+                                    <div class="card-news__name card-name">С Днем Рождения, Владимир Александрович!
+                                    </div>
+                                    <div class="card-news__text card-text">узнайте больше</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="news__slide swiper-slide">
+                            <a href="#" class="news__card card-news">
+                                <div class="card-news__image"><img src="./img/news-image-3.png" alt="" /></div>
+                                <div class="card-news__group">
+                                    <div class="card-news__info">
+                                        <div class="card-news__category">В мире</div>
+                                        <div class="card-news__date card-date">15 мая, 2021</div>
+                                    </div>
+
+                                    <div class="card-news__name card-name">Союз национальных и неолимпийских видов
+                                        спорта
+                                    </div>
+                                    <div class="card-news__text card-text">узнайте больше</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="news__slide swiper-slide">
+                            <a href="#" class="news__card card-news">
+                                <div class="card-news__image"><img src="./img/news-image-2.png" alt="" /></div>
+                                <div class="card-news__group">
+                                    <div class="card-news__info">
+                                        <div class="card-news__category">Обзоры</div>
+                                        <div class="card-news__date card-date">16 мая, 2021</div>
+                                    </div>
+
+                                    <div class="card-news__name card-name">С Днем Рождения, Владимир Александрович!
+                                    </div>
+                                    <div class="card-news__text card-text">узнайте больше</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="news__slide swiper-slide">
+                            <a href="#" class="news__card card-news">
+                                <div class="card-news__image"><img src="./img/news-image-2.png" alt="" /></div>
+                                <div class="card-news__group">
+                                    <div class="card-news__info">
+                                        <div class="card-news__category">Обзоры</div>
+                                        <div class="card-news__date card-date">16 мая, 2021</div>
+                                    </div>
+
+                                    <div class="card-news__name card-name">С Днем Рождения, Владимир Александрович!
+                                    </div>
+                                    <div class="card-news__text card-text">узнайте больше</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="news__navigation">
+                        <div class="news__prev swiper-button-prev slider-arrow --prev"></div>
+                        <div class="news__pagination swiper-pagination slider-pagination"></div>
+                        <div class="news__next swiper-button-next slider-arrow --next"></div>
                     </div>
                 </div>
             </div>
